@@ -1,16 +1,10 @@
 :root{
     --drawer-color: aqua;
     --text-primary: black;
-    --text-secondary: orange;
-    --transition-speed: 1s;
-    --drawer-width: clamp(210px, 22vw, 325px);
-    --transition-drawer: width 0.4s ease-in;
-    --transition-notDrawer: margin-left 0.4s ease-in;
-
+    --text-secondary: white;
+    font-size: 16px;
+    font-family: sans-serif;
 }
-
-
-
 
 body{
     width: 100vw;
@@ -19,21 +13,32 @@ body{
     grid-template-areas: 
     "drawer nav-bar nav-bar nav-bar"
     "drawer main main main";
-    grid-template-columns: 10rem 1fr 1fr 1fr;
-    grid-template-rows: 0.6fr 4fr;
+    grid-template-columns: 20rem 1fr 1fr 1fr;
+    grid-template-rows: 10rem;
+}
+
+div[class='menuItem']{
+    margin-bottom: 5%;
 }
 
 .drawer{
     grid-area: drawer;
     background-color: var(--drawer-color);
-    position: fixed;
-    width: auto;
+    width: 15rem;
 }
 
-
+.drawer:hover{
+    cursor: pointer;
+}
 
 .dashboard{
     font-size: 30px;
+    margin-bottom: 25%;
+    margin-top: 15%;
+}
+
+.commuities{
+    margin-bottom: 10%;
 }
 
 .menuItem{
@@ -41,21 +46,23 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    
-
+    margin-left: 15%;
 }
-
 
 .nav-bar{
     grid-area: nav-bar;
+    margin-top: 5%;
 }
+
 .top-bar{
     display: inline-block;
 
 }
+
 .bottom-bar{
     display: inline;
-    
+    height: 50px;
+    width: 50px;
 }
 
 .main{
