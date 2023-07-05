@@ -8,13 +8,13 @@
 
 body{
     width: 100vw;
-    height: 100vw;
+    height: auto;
     display: grid;
     grid-template-areas: 
     "drawer nav-bar nav-bar nav-bar"
     "drawer main main main";
     grid-template-columns: 17.5rem 1fr 1fr 1fr;
-    grid-template-rows: 10rem;
+    grid-template-rows: 20rem;
 }
 
 div[class='menuItem']{
@@ -43,7 +43,7 @@ div[class='menuItem']{
 }
 
 .commuities{
-    margin-bottom: 10%;
+    margin-bottom: 20%;
 }
 
 .menuItem{
@@ -56,24 +56,27 @@ div[class='menuItem']{
 
 .nav-bar{
     grid-area: nav-bar;
-    margin-top: 3%;
+    margin-top: 1%;
     border-bottom: 2px solid greenyellow;
+    
 }
 
 .nav-bar button{
     background-color: var(--drawer-color);
     border-radius: 10px;
 }
-
+.top-bar input{
+    border: 2px solid red;
+    border-radius: 10px;
+}
 .top-bar{
+    margin-right: 1%;
     display: inline-block;
-    margin-right: 2%;
+    margin-bottom: 2%;
 }
 
 .bottom-bar{
     display: inline;
-    height: 50px;
-    width: 50px;
 }
 
 .main{
